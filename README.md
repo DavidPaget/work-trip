@@ -45,8 +45,15 @@ Then use the browser menu, Install app (or Add to Home screen).
 
 ### 3. Android Auto prompt
 
-A web page cannot detect Android Auto. Use a phone routine instead: Google Assistant routine or Samsung
-Modes and Routines, trigger "Android Auto connected" (or the car's Bluetooth), action "open the Work Trip app".
+A web page cannot detect Android Auto, and Google Assistant routines have no "Android Auto connected" or
+car Bluetooth trigger. Options, in order of preference:
+
+1. Pixel: Settings, Modes, Driving. It can start when the phone connects to the car's Bluetooth, but it is
+   unconfirmed whether it can also open an app. Check the actions it offers on your phone.
+2. An automation app such as MacroDroid or Tasker: trigger "Bluetooth device connected" (the car), action
+   "Launch application: Work Trip". This works for wireless Android Auto. For a wired (USB) connection a
+   Bluetooth trigger may not fire; use the app's USB or power-connected trigger instead.
+3. No automation: keep the home-screen icon where you can reach it. Starting the trip is one tap and one number.
 
 ## Known limits
 
