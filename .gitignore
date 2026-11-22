@@ -1,0 +1,3 @@
+node_modules/
+# Personal trip history names clients - never commit or publish
+apps-script/SeedData.gs

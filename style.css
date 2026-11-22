@@ -1,0 +1,55 @@
+:root {
+  --bg: #f6f7f9;
+  --card: #ffffff;
+  --text: #16202c;
+  --muted: #5b6776;
+  --accent: #1f3a5f;
+  --accent-text: #ffffff;
+  --border: #d5dae1;
+  --error: #b3261e;
+  --warn-bg: #fff4d6;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #11161c;
+    --card: #1b232c;
+    --text: #e8edf3;
+    --muted: #9aa7b6;
+    --accent: #6fa3e8;
+    --accent-text: #0c1117;
+    --border: #2f3a46;
+    --error: #ff8a80;
+    --warn-bg: #3a3118;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.4 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  padding: env(safe-area-inset-top) 16px calc(24px + env(safe-area-inset-bottom));
+}
+main { max-width: 520px; margin: 0 auto; padding-top: 16px; display: grid; gap: 12px; }
+h1 { font-size: 1.6rem; margin: 0; }
+h2 { font-size: 1.05rem; margin: 8px 0 0; }
+.sub { color: var(--muted); display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 14px; display: grid; gap: 8px; }
+.card.warn { background: var(--warn-bg); }
+label { display: grid; gap: 4px; font-size: .9rem; color: var(--muted); }
+input[type=text], input[type=url], input[type=password] {
+  font: inherit; font-size: 1.25rem; padding: 12px; border-radius: 10px;
+  border: 1px solid var(--border); background: var(--card); color: var(--text); width: 100%;
+}
+button {
+  font: inherit; font-weight: 600; padding: 14px 16px; border-radius: 10px; cursor: pointer;
+  border: 1px solid var(--accent); background: var(--accent); color: var(--accent-text); width: 100%;
+}
+button.secondary { background: transparent; color: var(--accent); }
+button.link { width: auto; padding: 4px 8px; border: none; background: none; color: var(--accent); font-weight: 500; }
+button:disabled { opacity: .5; }
+.error { color: var(--error); font-weight: 600; }
+.hint { color: var(--muted); font-size: .9rem; }
+ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+li { display: flex; justify-content: space-between; gap: 8px; font-size: .95rem; }
+li .pending { color: var(--muted); }

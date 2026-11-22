@@ -1,0 +1,9 @@
+{
+  "name": "work-trip-web",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node test/lib.test.js",
+    "mock": "node test/mock-server.js"
+  }
+}
